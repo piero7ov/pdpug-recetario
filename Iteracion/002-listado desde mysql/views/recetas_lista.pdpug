@@ -1,0 +1,11 @@
+h2 Listado de recetas
+
+@if-error
+p #{error_db}
+
+ul
+  @foreach recetas as r
+    li
+      h3 #{r.titulo}
+      p #{r.descripcion}
+      small Slug: #{r.slug}
