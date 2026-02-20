@@ -1,0 +1,7 @@
+header
+  h1 Recetario PDpug
+  nav
+    a(href="index.php") Inicio
+    |  |
+    a(href="?p=nueva") Nueva receta
+  hr
