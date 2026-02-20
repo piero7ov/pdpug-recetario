@@ -1,0 +1,3 @@
+a(href="index.php") ← Volver al listado
+h2 Receta no encontrada
+p No existe una receta con el slug: #{slug}

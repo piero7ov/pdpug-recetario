@@ -1,0 +1,232 @@
+/* styles.css — PDpug Recetario (PapayaWhip, simple y limpio) */
+
+:root {
+    --bg: PapayaWhip;
+    /* principal */
+    --text: #111;
+    /* texto */
+    --muted: #444;
+    /* texto secundario */
+    --card: #fff7e6;
+    /* panel suave */
+    --line: rgba(0, 0, 0, .12);
+    /* bordes */
+    --btn: #111;
+    /* botones */
+    --btnText: #fff;
+    --danger: #b91c1c;
+    --radius: 14px;
+    --shadow: 0 10px 22px rgba(0, 0, 0, .10);
+    --max: 980px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial;
+    background: var(--bg);
+    color: var(--text);
+}
+
+a {
+    color: #111;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+a:hover {
+    opacity: .85;
+}
+
+header,
+main,
+footer {
+    width: min(var(--max), calc(100% - 32px));
+    margin: 0 auto;
+}
+
+header {
+    margin-top: 18px;
+    background: rgba(255, 255, 255, .55);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 14px 16px;
+}
+
+/* barra superior con logo + titulo */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.brand img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+}
+
+.brand h1 {
+    margin: 0;
+    font-size: 20px;
+    letter-spacing: .2px;
+}
+
+nav {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    display: inline-block;
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, .6);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, .85);
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: var(--line);
+    margin: 12px 0 0;
+}
+
+main {
+    margin: 14px auto 20px;
+    background: rgba(255, 255, 255, .55);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 16px;
+}
+
+h2 {
+    margin: 0 0 10px;
+    font-size: 18px;
+}
+
+h3 {
+    margin: 18px 0 8px;
+    font-size: 15px;
+}
+
+p {
+    color: var(--muted);
+    line-height: 1.55;
+}
+
+small {
+    color: rgba(0, 0, 0, .6);
+}
+
+ul,
+ol {
+    margin: 10px 0 0;
+    padding-left: 22px;
+}
+
+li {
+    margin: 7px 0;
+}
+
+/* formularios */
+form {
+    display: grid;
+    gap: 10px;
+    margin: 12px 0 0;
+    padding: 12px;
+    background: rgba(255, 255, 255, .65);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+}
+
+label {
+    font-weight: 600;
+    color: var(--text);
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: 1px solid var(--line);
+    background: rgba(255, 255, 255, .9);
+    color: var(--text);
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    width: fit-content;
+    padding: 10px 14px;
+    border-radius: 12px;
+    border: 1px solid #111;
+    background: var(--btn);
+    color: var(--btnText);
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: .9;
+}
+
+/* links peligrosos */
+a[href*="p=eliminar"] {
+    color: var(--danger);
+}
+
+a[href*="p=eliminar"]:hover {
+    opacity: .85;
+}
+
+/* listadito más agradable */
+ul {
+    background: rgba(255, 255, 255, .45);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 12px 16px 12px 28px;
+}
+
+footer {
+    margin: 12px auto 26px;
+    text-align: center;
+    color: rgba(0, 0, 0, .55);
+}
+
+@media (max-width: 520px) {
+    .brand img {
+        width: 34px;
+        height: 34px;
+    }
+
+    .brand h1 {
+        font-size: 18px;
+    }
+
+    main {
+        padding: 14px;
+    }
+}

@@ -1,0 +1,8 @@
+header
+  .brand
+    img(src="https://piero7ov.github.io/pierodev-assets/brand/pierodev/logos/solologo_negro.png" alt="PieroDev")
+    h1 Recetario PDpug
+  nav
+    a(href="index.php") Inicio
+    a(href="?p=nueva") Nueva receta
+  hr
