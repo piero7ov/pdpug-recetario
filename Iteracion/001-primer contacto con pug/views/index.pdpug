@@ -1,0 +1,9 @@
+doctype html
+html(lang="es")
+  head
+    meta(charset="utf-8")
+    title #{title}
+  body
+    h1 #{title}
+    p #{msg}
+    p Estado MySQL: #{db_status}
