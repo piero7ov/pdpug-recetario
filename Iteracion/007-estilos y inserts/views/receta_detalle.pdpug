@@ -1,0 +1,26 @@
+a(href="index.php") ← Volver al listado
+
+p
+  a(href="?p=editar&r=#{receta.slug}") Editar
+  |  |
+  a(href="?p=eliminar&r=#{receta.slug}") Eliminar
+
+h2 #{receta.titulo}
+p #{receta.descripcion}
+small Slug: #{receta.slug}
+
+h3 Ingredientes
+@if ingredientes
+  ul
+    @foreach ingredientes as ing
+      li #{ing.texto}
+@else
+  p (Sin ingredientes todavía)
+
+h3 Pasos
+@if pasos
+  ol
+    @foreach pasos as st
+      li #{st.texto}
+@else
+  p (Sin pasos todavía)

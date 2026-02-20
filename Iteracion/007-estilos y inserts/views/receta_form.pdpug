@@ -1,0 +1,35 @@
+a(href="index.php") ← Volver al listado
+
+h2 Nueva receta
+
+@if errors
+  ul
+    @foreach errors as e
+      li #{e}
+
+form(method="post" action="?p=nueva")
+  p
+    label Título:
+    br
+    input(type="text" name="titulo" value="#{old.titulo}")
+
+  p
+    label Descripción:
+    br
+    textarea(name="descripcion" rows="3" cols="60")
+      | #{old.descripcion}
+
+  p
+    label Ingredientes (1 por línea):
+    br
+    textarea(name="ingredientes" rows="6" cols="60")
+      | #{old.ingredientes}
+
+  p
+    label Pasos (1 por línea):
+    br
+    textarea(name="pasos" rows="8" cols="60")
+      | #{old.pasos}
+
+  p
+    button(type="submit") Guardar
