@@ -1,0 +1,16 @@
+h2 Listado de recetas
+
+@if error_db
+  p Error DB: #{error_db}
+@else
+  p Total: #{total}
+
+@if recetas
+  ul
+    @foreach recetas as r
+      li
+        a(href="?r=#{r.slug}") #{r.titulo}
+        p #{r.descripcion}
+        small Slug: #{r.slug}
+@else
+  p No hay recetas todavía.

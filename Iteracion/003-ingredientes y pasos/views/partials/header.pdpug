@@ -1,0 +1,5 @@
+header
+  h1 Recetario PDpug
+  nav
+    a(href="index.php") Inicio
+  hr
