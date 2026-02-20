@@ -1,0 +1,34 @@
+h2 Listado de recetas
+
+form(method="get" action="index.php")
+  p
+    label Buscar:
+    br
+    input(type="text" name="q" value="#{q}")
+  p
+    label Orden:
+    br
+    select(name="ord")
+      option(value="recientes") Recientes primero
+      option(value="antiguos") Antiguos primero
+      option(value="az") A → Z
+      option(value="za") Z → A
+  p
+    button(type="submit") Aplicar
+    |  |
+    a(href="index.php") Limpiar
+
+@if error_db
+  p Error DB: #{error_db}
+@else
+  p Total: #{total}
+
+@if recetas
+  ul
+    @foreach recetas as r
+      li
+        a(href="?r=#{r.slug}") #{r.titulo}
+        p #{r.descripcion}
+        small Slug: #{r.slug}
+@else
+  p No hay recetas para esa búsqueda.

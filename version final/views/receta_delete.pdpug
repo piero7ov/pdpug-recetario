@@ -1,0 +1,10 @@
+a(href="index.php?r=#{receta.slug}") ← Volver al detalle
+
+h2 Eliminar receta
+p Vas a eliminar: #{receta.titulo}
+small Slug: #{receta.slug}
+
+p Esta acción no se puede deshacer.
+
+form(method="post" action="?p=eliminar&r=#{receta.slug}")
+  button(type="submit") Sí, eliminar
